@@ -1,0 +1,14 @@
+from django.apps import AppConfig
+from django.conf import settings
+
+
+class CoreConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'core'
+    verbose_name = 'تنظیمات عمومی'
+
+    def ready(self):
+        from django.contrib import admin
+        admin.site.site_header = settings.ADMIN_SITE_HEADER
+        admin.site.site_title = settings.ADMIN_SITE_TITLE
+        admin.site.index_title = settings.ADMIN_INDEX_TITLE

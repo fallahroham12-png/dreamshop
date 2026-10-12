@@ -1,0 +1,10 @@
+Django>=5.0,<5.2
+djangorestframework>=3.15,<3.16
+django-filter>=24.2
+django-cors-headers>=4.3
+python-decouple>=3.8
+Pillow>=10.3
+requests>=2.31          # فراخوانی API درگاه پرداخت
+psycopg2-binary>=2.9   # PostgreSQL driver (production)
+gunicorn>=22.0          # production WSGI server
+whitenoise>=6.6         # static file serving in production
